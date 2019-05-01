@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.lst_Main = new System.Windows.Forms.ListBox();
             this.lab_Name = new System.Windows.Forms.Label();
             this.lab_URL = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@
             this.Controls.Add(this.lst_Main);
             this.Font = new System.Drawing.Font("宋体", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frm_Main";
