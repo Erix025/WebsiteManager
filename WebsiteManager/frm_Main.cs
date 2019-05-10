@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace WebsiteManager
             InitializeComponent();
         }
         private Array_Website websites;
-        private static string path = Environment.CurrentDirectory;
+        private static string path = Application.StartupPath;
         private string ProgramPath = path + "/Website.txt";
         private void lst_Main_SelectedIndexChanged(object sender, EventArgs e)
         {
