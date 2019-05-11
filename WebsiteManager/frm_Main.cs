@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using WebsiteManager.Varibute;
-using WebsiteManager.DataEdit;
 using System.Diagnostics;
+using System.Windows.Forms;
+using WebsiteManager.DataEdit;
+using WebsiteManager.Varibute;
 namespace WebsiteManager
 {
     public partial class frm_Main : Form
@@ -19,8 +12,7 @@ namespace WebsiteManager
             InitializeComponent();
         }
         private Array_Website websites;
-        private static string path = Environment.CurrentDirectory;
-        private string ProgramPath = path + "/Website.txt";
+        private string ProgramPath = Application.StartupPath + "/Website.txt";
         private void lst_Main_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lst_Main.SelectedIndex != -1)
@@ -44,9 +36,8 @@ namespace WebsiteManager
 
         private void frm_Main_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(path);
             websites = DataLoad.WebsiteLoad(ProgramPath);
-            foreach(Website website in websites.GetArray())
+            foreach (Website website in websites.GetArray())
             {
                 lst_Main.Items.Add(website.Name);
             }
